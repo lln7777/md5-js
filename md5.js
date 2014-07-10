@@ -110,9 +110,7 @@
 
 	function md51(s) {
 		// Converts the string to UTF-8 "bytes" when necessary
-		if (/[\x80-\xFF]/.test(s)) {
-			s = unescape(encodeURI(s));
-		}
+		s = unescape(encodeURI(s));
 		txt = '';
 		var n = s.length, state = [1732584193, -271733879, -1732584194, 271733878], i;
 		for (i = 64; i <= s.length; i += 64) {
